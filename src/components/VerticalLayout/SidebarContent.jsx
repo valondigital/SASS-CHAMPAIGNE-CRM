@@ -147,10 +147,23 @@ const SidebarContent = (props) => {
           <ul className="metismenu list-unstyled" id="side-menu">
             {sidebarLinks.map((link, index) => (
               <li key={index}>
-                <Link to={link.path}>
+                <Link
+                  to={link.path}
+                  className={link.children ? "has-arrow" : ""}
+                >
                   <i className={link.icon}></i>
                   <span>{props.t(link.label)}</span>
                 </Link>
+
+                {link.children && (
+                  <ul className="sub-menu" aria-expanded="false">
+                    {link.children.map((child, childIndex) => (
+                      <li key={childIndex}>
+                        <Link to={child.path}>{props.t(child.label)}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

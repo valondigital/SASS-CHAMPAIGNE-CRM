@@ -5,9 +5,29 @@ export const sidebarLinks = [
     label: "Dashboard",
   },
   {
-    path: "/apps-filemanager",
+    path: "/projects-grid",
     icon: "bx bx-file",
-    label: "File Manager",
+    label: "Accounts",
+  },
+  {
+    path: "/ecommerce-customers",
+    icon: "bx bx-file",
+    label: "Contacts",
+  },
+  {
+    path: "/tasks-kanban",
+    icon: "bx bx-file",
+    label: "Deals",
+  },
+  {
+    path: "/#",
+    icon: "bx bx-user",
+    label: "User Management",
+    children: [
+      { path: "/apex-charts", label: "Roles" },
+      { path: "/e-charts", label: "Permissions" },
+      { path: "/contacts-list", label: "Users" },
+    ],
   },
   {
     path: "/calendar",
@@ -19,11 +39,7 @@ export const sidebarLinks = [
     icon: "bx bx-chat",
     label: "Conversations",
   },
-  {
-    path: "/ecommerce-customers",
-    icon: "bx bx-file",
-    label: "Contacts",
-  },
+
   {
     path: "/email-inbox",
     icon: "bx bx-file",
@@ -33,20 +49,5 @@ export const sidebarLinks = [
     path: "/invoices-list",
     icon: "bx bx-file",
     label: "Invoices",
-  },
-  {
-    path: "/projects-grid",
-    icon: "bx bx-file",
-    label: "Projects",
-  },
-  {
-    path: "/tasks-kanban",
-    icon: "bx bx-file",
-    label: "Deals",
-  },
-  {
-    path: "/contacts-list",
-    icon: "bx bx-file",
-    label: "Users",
   },
 ];
